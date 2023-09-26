@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br><h1>User Information</h1><br>
+
+    <form>
+        <label for="name">Name : </label>
+        <input type="text" id="name" name="name">
+
+        <br><br><br>
+        <h4>When is your birthday?</h4>
+        <p><input type="date"></p>
+        
+        <br><br>
+        <h4>What is your grade?</h4>
+        <input type="radio" id="elem" name="grade">
+        <label for="elem">초등학생</label><br>
+        <input type="radio" id="midhigh" name="grade">
+        <label for="midhigh">중고등학생</label><br>
+        <input type="radio" id="coll" name="grade">
+        <label for="coll">대학생</label>
+
+        <br><br><br>
+        <h4>What is your hobby? (you can check more than one)</h4>
+        <input type="checkbox" id="hobby1" name="movie">
+        <label for="hobby1"> I like watch movie</label><br>
+        <input type="checkbox" id="hobby2" name="exercise">
+        <label for="hobby2"> I like exercise</label><br>
+        <input type="checkbox" id="hobby3" name="instrument">
+        <label for="hobby3"> I like play instrument</label><br>
+        <input type="checkbox" id="hobby4" name="book">
+        <label for="hobby4"> I like read a book</label><br>
+        <input type="checkbox" id="hobby5" name="coding">
+        <label for="hobby5"> I like programming</label><br><br>
+
+        <br>
+        <h4>Where are you from?</h4>
+        <select name="countrys" id="lang">
+            <option value="select">Select your country</option>
+            <option value="kor">Korea</option>
+            <option value="us">America</option>
+            <option value="uk">United Kingdom</option>
+            <option value="czechia">Czechia</option>
+            <option value="japan">Japan</option>
+            <option value="vietnam">Vietnam</option>
+        </select>
+
+        <br><br><br>
+        <h4>Express your condition</h4>
+        <p><textarea cols="50" rows="10"></textarea></p><br><br>
+        <input type="submit" style="height: 50px; width: 100px; border-radius: 10px;"/>
+
+    </form>
+</body>
+</html>
