@@ -7,21 +7,19 @@
     <title>PP2-eunsaemLee-style1</title>
 
     <style>
-
         body {
             font: 100% Lucida Sans, Verdana;
             margin: 20px;
             line-height: 26px;
         }
 
-        .radius {
-            border-radius: 4px;
-            margin: 4px;
+        .container {
+            xmin-width: 900px;
         }
 
-        .margin {
-            margin: 0;
-            padding: 0;
+        .wrapper {
+            position: relative;
+            overflow: auto;
         }
 
         #top {
@@ -30,29 +28,32 @@
             padding: 15px;
         }
 
-        .menubar {
+        #left {
             width: 200px;
             float: left;
         }
 
-        .menuitem{
+        .margin {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menuitem {
             background-color: #f1f1f1;
             border: 1px solid #d4d4d4;
             list-style-type: none;
             padding: 2px;
-
-            /* margin: 4px; */
-            border-radius: 4px;
+            cursor: pointer;
         }
 
         .menuitem-f {
-            background-color: #04AA6D; 
-            color: white; 
+            background-color: #04AA6D;
+            color: white;
             font-weight: bold;
             padding: 2px;
 
-            /* margin: 4px; */
             border-radius: 4px;
+            margin: 4px;
         }
 
         #center {
@@ -62,16 +63,18 @@
 
         #right {
             background-color: #32a4e7;
-            color: #ffffff;
+            color: white;
             padding: 10px;
             width: 180px;
             bottom: 0;
             top: 0;
             right: 0;
             position: absolute;
+        }
 
-            width: auto;
-            position: relative;
+        #top, #right, #bottom, .menuitem {
+            border-radius: 4px;
+            margin: 4px;
         }
 
         #bottom {
@@ -81,18 +84,50 @@
             padding: 10px;
             font-size: 70%;
             line-height: 14px;
+
+            border-radius: 4px;
+            margin: 4px;
         }
 
-    
+        a {
+            color: black;
+            text-decoration: none;
+        }
 
+        a:hover {
+            text-decoration: none;
+        }
+
+        @media (max-width: 800px) {
+            #sidebar {
+                width: auto;
+                position: relative;
+            }
+
+            #main {
+                margin-right: 0;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+            #menubar {
+                width: auto;
+                float: none;
+            }
+
+            #main {
+                margin: 0;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <div style="xmin-width: 900px; position: relative; overflow: auto;">
+    <div class="container wrapper">
 
-        <div id = "top" class="radius">
+        <div id="top">
 
             <h1 class="margin">
                 Welcome to Eunsaem-Lee's Homepage (22200565)
@@ -102,48 +137,51 @@
             </p>
         </div>
 
-        <div id = "middle">
+        <div id="middle">
 
-            <div id = "left" class="menubar">
-                <ul>
+            <div id="left" class="wrapper">
+                <ul class="margin">
                     <li class="menuitem-f">Stylesheet 1</li>
-                    <li class = "menuitem" onclick = "location.href = 'style2.html'">Stylesheet 2</li>
-                    <li class = "menuitem">Stylesheet 3</li>
-                    <li class = "menuitem">Stylesheet 4</li>
-                    <li class = "menuitem" onclick = "location.href='nostyle.html'">No Stylesheet</li>
+                    <li class="menuitem" onclick="location.href = 'style2.html'">Stylesheet 2</li>
+                    <li class="menuitem">Stylesheet 3</li>
+                    <li class="menuitem">Stylesheet 4</li>
+                    <li class="menuitem" onclick="location.href='nostyle.html'">No Stylesheet</li>
                 </ul>
             </div>
-    
-            <div id = "center">
+
+            <div id="center" style="padding: 10px; margin: 0 210px;">
                 <h1>
                     Same Page Different Stylesheets
                 </h1>
                 <p>
-                    This is a demonstration of how different stylesheets can change the layout of your HTML page. You can
-                    change the layout of this page by selecting different stylesheets in the menu, or by selecting one of
+                    This is a demonstration of how different stylesheets can change the layout of your HTML page. You
+                    can
+                    change the layout of this page by selecting different stylesheets in the menu, or by selecting one
+                    of
                     the following links:
                 </p>
                 <div>
-                    <a href = "#">Stylesheet1</a>,
-                    <a href = "#" onclick = "location.href = 'style2.html'">Stylesheet2</a>,
-                    <a href = "#">Stylesheet3</a>,
-                    <a href = "#">Stylesheet4</a>.
+                    <a href="#">Stylesheet1</a>,
+                    <a href="#" onclick="location.href = 'style2.html'">Stylesheet2</a>,
+                    <a href="#">Stylesheet3</a>,
+                    <a href="#">Stylesheet4</a>.
                 </div>
-    
-                <h2 onclick = "location.href = 'nostyle.html'">
+
+                <h2 onclick="location.href = 'nostyle.html'">
                     No Styles
                 </h2>
                 <div>
-                    This page uses DIV elements to group different sections of the HTML page. Click here to see how the page
+                    This page uses DIV elements to group different sections of the HTML page. Click here to see how the
+                    page
                     looks like with no stylesheet:
                 </div>
                 <div>
-                    <a href="#">No Stylesheet.</a>
+                    <a href="#" onclick="location.href='nostyle.html'">No Stylesheet.</a>
                 </div>
             </div>
-    
-    
-            <div id = "right" class="radius">
+
+
+            <div id="right">
                 <h3>
                     Side-Bar
                 </h3>
@@ -152,11 +190,11 @@
                     laoreet dolore magna aliquam erat volutpat.
                 </p>
             </div>
-            
-        </div>
-        
 
-        <div id = "bottom" class="radius">
+        </div>
+
+
+        <div id="bottom">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
             dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
             suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
@@ -166,6 +204,8 @@
         </div>
 
     </div>
+
+    
 
 </body>
 
